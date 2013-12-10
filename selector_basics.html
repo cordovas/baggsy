@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Selector Basics</title>
+<link href='http://fonts.googleapis.com/css?family=Allerta+Stencil' rel='stylesheet' type='text/css'>
+<style>
+p {
+	color: #505050;
+	font-size: 1em;
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	margin-left: 100px;	
+}
+h1, h2, h3 {
+	color: #000000;
+	font-family: 'Allerta Stencil', sans-serif;
+	border-top: 2px solid #000000;
+	padding-top: 7px;
+	text-align: center;	
+}
+
+#article {
+ background-color: #FFFFFF;
+ background-position: center top;
+ padding: 0;
+ margin: 0 auto;
+ width: 760px;
+}
+h1+p {
+ color: #FF6600;
+ font-size: 1.2em;
+ line-height: 140%;
+ margin-top: 20px;
+}
+
+</style>
+<script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsoRcX98AX0inHj6TVUL5Bpmun9ZmNSTI&sensor=true">
+    </script>
+    <script type="text/javascript">
+      function initialize() {
+        var latlng = new google.maps.LatLng(40.7562008,-73.9903784);
+        var latlng2 = new google.maps.LatLng(37.3316591,-122.0301778);
+        var latlng3 = new google.maps.LatLng(37.3316591,-122.0301778);
+        var myOptions = {
+        zoom: 18,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var myOptions2 = {
+        zoom: 15,
+        center: latlng2,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+        var map2 = new google.maps.Map(document.getElementById("map_canvas_2"), myOptions);
+        var map3 = new google.maps.Map(document.getElementById("map_canvas_3"), myOptions);
+
+        var myMarker = new google.maps.Marker({ position: latlng, map: map, title:"About.com Headquarters" });
+        var myMarker2 = new google.maps.Marker({ position: latlng2, map: map2, title:"Apple Computer" });
+      }
+    </script>
+</head>
+<body>
+<div><img src="banksyTitle.jpg" width="760" height="198" alt="CSS: The Missing Manual">
+</div>
+<h2>Dec 10</h2>
+<div id="map_canvas" style="width:300px; height:300px; float:right;"></div>
+<p>Sed ut perspiciatis unde omnis istedoloremque laudantium, totam rem aperiam, eaque ipsa  </p>
+<p>nventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit </p>
+<h2>Who Knew CSS Had Such Power?</h2>
+<p> voluptas nulla pariatur?</p>
+<p class="note"><strong>NOTE:</strong> Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? </p>
+<h3>Not Me!</h3>
+<p>v qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+<h3>Me Neither!</h3>
+<p>dolorem eum fugiat quo voluptas nulla pariatur?</p>
+</body>
+</html>
