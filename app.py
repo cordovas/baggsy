@@ -14,7 +14,7 @@ app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 
 # --------- Database Connection ---------
 # MongoDB connection to MongoLab's database
-app.config['MONGODB_SETTINGS'] = {'HOST':os.environ.get('MONGOLAB_URI'),'DB': 'baggsy'}
+app.config['MONGODB_SETTINGS'] = {'HOST':os.environ.get('MONGOLAB_URI'),'DB': 'itptravels-7'}
 app.logger.debug("Connecting to MongoLabs")
 db = MongoEngine(app) # connect MongoEngine with Flask App
 
